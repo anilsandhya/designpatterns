@@ -1,5 +1,7 @@
 package javademo04;
 
+/* this is main method */
+
 public class ActionAdventureGame {
 	public static void main(String[] args) {
 		Character king = new King();
