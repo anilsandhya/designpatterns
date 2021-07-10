@@ -1,2 +1,2 @@
-module javademo04 {
+module javademo03 {
 }
