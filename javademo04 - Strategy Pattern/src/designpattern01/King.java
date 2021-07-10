@@ -1,4 +1,4 @@
-package javademo04;
+package designpattern01;
 
 public class King extends Character {
 	public void fight() {

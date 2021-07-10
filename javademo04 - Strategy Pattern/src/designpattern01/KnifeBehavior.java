@@ -1,4 +1,4 @@
-package javademo04;
+package designpattern01;
 
 public class KnifeBehavior implements WeaponBehavior {
 	public void useWeapon() {

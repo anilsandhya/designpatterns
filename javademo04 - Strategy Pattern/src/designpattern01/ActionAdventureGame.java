@@ -1,4 +1,4 @@
-package javademo04;
+package designpattern01;
 
 /* this is main method */
 
