@@ -3,7 +3,7 @@ package singletonpattern01;
 public class ChocolateBoiler {
 	private boolean empty;
 	private boolean boiled;
-	private static ChocolateBoiler chocolateBoiler;
+	private volatile static ChocolateBoiler chocolateBoiler;
 
 	private ChocolateBoiler() {
 		empty = true;
@@ -12,7 +12,9 @@ public class ChocolateBoiler {
 	
 	public static ChocolateBoiler getInstance() {
 		if (chocolateBoiler == null) {
-			chocolateBoiler = new ChocolateBoiler();
+			synchronized(ChocolateBoiler.class) {
+				chocolateBoiler = new ChocolateBoiler();
+			}
 		}
 		return chocolateBoiler;
 	}
@@ -21,7 +23,7 @@ public class ChocolateBoiler {
 		if (isEmpty()) {
 			empty = false;
 			boiled = false;
-			// fill the boilder with milk/chocolate mixture
+			// fill the boiler with milk/chocolate mixture
 		}
 	}
 	
