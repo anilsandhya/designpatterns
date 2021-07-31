@@ -5,6 +5,8 @@ public class ChocolateBoiler {
 	private boolean boiled;
 	private volatile static ChocolateBoiler chocolateBoiler;
 
+	// this is comment 
+	
 	private ChocolateBoiler() {
 		empty = true;
 		boiled = false;
